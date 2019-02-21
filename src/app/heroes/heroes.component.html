@@ -1,7 +1,23 @@
 <div>
     <ul>
         <li *ngFor='let hero of heroes' class='hero-list-item' (click)='onSelect(hero)'>
-        {{ hero.name | uppercase}}
+        <a routerLink='/detail/{{ hero.id }}'>
+            {{ hero.name | uppercase}}
+        </a>
+            <button (click)='delete(hero)'>Remove</button>
+        </li>
     </ul>
-    <app-hero-detail [hero]='selectedHero'></app-hero-detail>
+    <div>
+        <label>New Hero Name:
+            <input #heroName />
+        </label>
+    </div>
+    <div>
+        <label>New Hero Power:
+            <input #heroPower />
+        </label>
+    </div>
+    <button (click)='add(heroName.value, heroPower.value); heroName.value=""; heroPower.value=""'>
+    Add Hero 
+    </button>
 </div>
