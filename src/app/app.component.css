@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+.app-wrapper {
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.app-title {
+    font-size: 250%;
+    letter-spacing: 0.15em;
+    color: rgb(250, 188, 31);
+    font-family: 'Source Code Pro', monospace;
+    background-color: white;
+}

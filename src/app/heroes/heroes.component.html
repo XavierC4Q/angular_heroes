@@ -1,0 +1,7 @@
+<div>
+    <ul>
+        <li *ngFor='let hero of heroes' class='hero-list-item' (click)='onSelect(hero)'>
+        {{ hero.name | uppercase}}
+    </ul>
+    <app-hero-detail [hero]='selectedHero'></app-hero-detail>
+</div>
